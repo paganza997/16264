@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Real time Edge Detection</h1>
+    <p>The sensor that I used for this assignment was my computer webcam and
+        used MATLAB to implement the edge detection.
+    </p>
+    <h3>Setting it up</h3>
+    <p>
+        You will need to download two add-ons from MATLAB.<br>
+        When in the Home tab of MATLAB, navigate to the Add-Ons button on the right.
+        Search for "webcams" in the search bar. You will need to download the 
+        "MATLAB Support Package for USB Webcams" and "Image Acquisition Toolbox 
+        Support Package for OS Generic Video Interface" packages.
+    </p>
+    <img src="packages.jpg" alt="packages" width="900" height="100">
+    <p>To make sure things are working, you can type "webcamlist" into the
+        Command Window of MATLAB. You should get a list of all webcams 
+        connected to your computer.
+    </p>
+    <h3>The Code</h3>
+    <p>The code for this isn't too involved. The snapshot function grabs a single image
+        from the webcam and the imshow() displays that image. We can then implement the
+        edge detection.<br>
+        First, we convert the image to gray scale with rgb2gray(). We then add some 
+        thresholding to get rid of all the noise that will appear. Then, use the built-in
+        function edge() along with the 'canny' parameter (which uses the Canny Method to do the edge detection part).<br>
+        All of this is occuring in a while loop so the program is continually taking an
+        image and applying the edge detection. 
+    </p>
+    <img src="code.jpg" alt="code" width="480" height="500">
+    <br>
+    <h3>Results</h3>
+    <img src="edge_gif.gif" alt="wow" width="480" height="424">
+
+</body>
+</html>
